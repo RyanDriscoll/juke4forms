@@ -7,9 +7,7 @@ juke.config(function ($stateProvider) {
     templateUrl: '/js/playlist/templates/playlist.html',
     controller: 'PlaylistsCtrl'
     // resolve: {
-    //   allPlaylists: function (PlaylistFactory) {
-    // //     return PlaylistFactory.fetchAll();
-    // //   }
+    //   // load list of all playlists
     // }
   });
 });

@@ -1,15 +1,17 @@
 <div>
     <h3>Playlists</h3>
     <div class="list-group">
-        <form name="playlistSubmission">
-            <input type="text" name="playlist_submission_bar" ng-model="newPlaylist.name">
+        <form name="playlistSubmission" novalidate>
+            <input type="text" name="playlist_submission_bar" ng-model="newPlaylist.name" ng-maxlength="16" required>
             <br>
-<!--             <div>{{ playlistSubmission }}</div>
- -->            <br>
-            <button type="submit" name="submit">Create Playlist</button>
+              <div class="alert alert-warning" ng-show="playlistSubmission.$invalid && playlistSubmission.$dirty">Please enter a name</div>
+            <br>
+            <button type="submit" name="submit"
+            ng-click="createPlaylist(newPlaylist); setClean()"
+            ng-disabled="playlistSubmission.$invalid" required> Create Playlist</button>
         </form>
-<!--         <pre>{{ playlistSubmission | json }}</pre>
- -->        <pre>{{ newPlaylist | json }}</pre>
+        <pre>{{ playlistSubmission | json }}</pre>
+        <pre>{{ newPlaylist | json }}</pre>
         <!-- <div class="list-group-item" ng-repeat="artist in artists | filter: {name: artistSearch}">
             <a ui-sref="artist({artistId: artist.id})">{{ artist.name }}</a>
         </div> -->

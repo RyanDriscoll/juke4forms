@@ -2,6 +2,13 @@
 
 /* ARTISTS (PLURAL) CONTROLLER */
 
-juke.controller('PlaylistsCtrl', function ($scope) {
-  	// console.log($scope.playlistSubmission.name);
+juke.controller('PlaylistsCtrl', function ($scope, PlaylistFactory) {
+	$scope.createPlaylist = function (data) {
+    return PlaylistFactory.create(data);
+  };
+  $scope.setClean = function() {
+  	$scope.playlistSubmission.$dirty = false;
+  	$scope.newPlaylist = "";
+  };
+
 });

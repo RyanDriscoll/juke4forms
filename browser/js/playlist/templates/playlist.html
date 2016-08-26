@@ -1,0 +1,17 @@
+<div>
+    <h3>Playlists</h3>
+    <div class="list-group">
+        <form name="playlistSubmission">
+            <input type="text" name="playlist_submission_bar" ng-model="newPlaylist.name">
+            <br>
+<!--             <div>{{ playlistSubmission }}</div>
+ -->            <br>
+            <button type="submit" name="submit">Create Playlist</button>
+        </form>
+<!--         <pre>{{ playlistSubmission | json }}</pre>
+ -->        <pre>{{ newPlaylist | json }}</pre>
+        <!-- <div class="list-group-item" ng-repeat="artist in artists | filter: {name: artistSearch}">
+            <a ui-sref="artist({artistId: artist.id})">{{ artist.name }}</a>
+        </div> -->
+    </div>
+</div>

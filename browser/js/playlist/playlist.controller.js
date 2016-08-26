@@ -10,5 +10,8 @@ juke.controller('PlaylistsCtrl', function ($scope, PlaylistFactory) {
   	$scope.playlistSubmission.$dirty = false;
   	$scope.newPlaylist = "";
   };
+  $scope.fetchById = function (id) {
+  	return PlaylistFactory.fetchById(id);
+  };
 
 });

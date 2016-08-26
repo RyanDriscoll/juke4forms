@@ -47,7 +47,7 @@
                     </p>
                 </section>
                 <p class="playlist-item" ng-repeat="playlist in playlists">
-                    <a>{{playlist}}</a>
+                    <a ui-sref="playlist({playlistId: playlist.id})">{{playlist.name}}</a>
                 </p>
             </sidebar>
         </div>
